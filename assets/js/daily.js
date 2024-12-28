@@ -67,7 +67,10 @@ function mainMenu() {
     alert(exitDaily);
     return;
   }
-  localStorage.daily = JSON.stringify([{ dailyValue, dateValue }]);
+
+  daily.push({ dailyValue, dateValue });
+
+  localStorage.daily = JSON.stringify([]);
 
   alert(successfullyAdded);
 }
